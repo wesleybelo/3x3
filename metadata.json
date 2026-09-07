@@ -1,0 +1,6 @@
+{
+  "name": "Súmula Digital Oficial FIBA 3x3",
+  "description": "Sistema eletrônico oficial de súmula digital para partidas de basquetebol FIBA 3x3 com motor de regras, gestão de eventos, running score e auditoria em tempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

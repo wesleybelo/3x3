@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    background-color: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    overflow: hidden !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Esconde todos os controles, cabeçalhos de navegação, modais e botões de tela */
+  header,
+  footer,
+  nav,
+  #fiba-game-controls-panel,
+  #fiba-operator-scoreboard,
+  #fiba-event-feed,
+  #fiba-setup-screen,
+  #app-operator-column,
+  .no-print,
+  [role="dialog"],
+  .fixed {
+    display: none !important;
+  }
+
+  body > div[id="root"] > div {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  #app-split-container {
+    display: block !important;
+  }
+
+  #app-split-container > div:first-child {
+    display: none !important;
+  }
+
+  #app-split-container > div:last-child {
+    width: 100% !important;
+    position: static !important;
+  }
+
+  #fiba-official-scoresheet-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  /* Garante que os grids internos da súmula permaneçam perfeitamente intactos */
+  #fiba-scoresheet-paper .grid {
+    display: grid !important;
+  }
+
+  #fiba-scoresheet-paper {
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+    width: 200mm !important;
+    max-width: 200mm !important;
+    max-height: 287mm !important;
+    padding: 3mm 4mm !important;
+    margin: 4mm auto !important;
+    box-sizing: border-box !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    overflow: hidden !important;
+  }
+}
